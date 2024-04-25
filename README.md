@@ -1,2 +1,2 @@
 # Simple-Socket
-Simple socket server 
+a simple socket object 
