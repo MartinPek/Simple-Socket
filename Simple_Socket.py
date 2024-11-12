@@ -104,6 +104,14 @@ class SocketClient:
         self.buffer = []
         return ret
 
+    def transmit(self, line):
+        line = line.rstrip() + "\n"
+        line = line.encode()
+        try:
+            self.s.send(line)
+        except socket.error as msg:
+            print("Socket transmission Error: {}".format(msg))
+
 
 if __name__ == "__main__":
     print("not imported")
